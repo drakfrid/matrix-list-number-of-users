@@ -5,14 +5,14 @@
 # Version 1.1, 2022-02-20
 
 echo "Please enter your homeserver URL (e.g. matrix.example.com)"
-read -s HOMESERVER
+read HOMESERVER
 if [[ -z "$HOMESERVER" ]]
 then
   while [[ -z "$HOMESERVER" ]]
   do
     echo "No admin access token entered"
     echo "Please enter your admin access token"
-    read -s HOMESERVER
+    read HOMESERVER
   done
 fi
 
