@@ -4,18 +4,6 @@
 # https://matrix-org.github.io/synapse/develop/admin_api/user_admin_api.html#list-accounts
 # Version 1.1, 2022-02-20
 
-echo "Please enter your admin access token"
-read -s TOKEN
-if [[ -z "$TOKEN" ]]
-then
-  while [[ -z "$TOKEN" ]]
-  do
-    echo "No admin access token entered"
-    echo "Please enter your admin access token"
-    read -s TOKEN
-  done
-fi
-
 echo "Please enter your homeserver URL (e.g. matrix.example.com)"
 read -s HOMESERVER
 if [[ -z "$HOMESERVER" ]]
@@ -25,6 +13,18 @@ then
     echo "No admin access token entered"
     echo "Please enter your admin access token"
     read -s HOMESERVER
+  done
+fi
+
+echo "Please enter your admin access token"
+read -s TOKEN
+if [[ -z "$TOKEN" ]]
+then
+  while [[ -z "$TOKEN" ]]
+  do
+    echo "No admin access token entered"
+    echo "Please enter your admin access token"
+    read -s TOKEN
   done
 fi
 
