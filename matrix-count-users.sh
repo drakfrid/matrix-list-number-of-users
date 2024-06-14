@@ -44,7 +44,7 @@ fi
 
 numberOfUsers=$(echo "$users" | tail -c 8 | grep -Eo "[0-99999]+")
 
-echo "There are" $numberOfUsers "users on <HOMESERVER> (non-deactivated) \
+echo "There are" $numberOfUsers "users on $HOMESERVER (non-deactivated) \
 as of" $(date)
-echo "There are" $numberOfUsers "users on <HOMESERVER> (non-deactivated) \
+echo "There are" $numberOfUsers "users on $HOMESERVER (non-deactivated) \
 as of" $(date) >> users.txt
